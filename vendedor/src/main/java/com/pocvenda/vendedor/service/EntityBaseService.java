@@ -1,0 +1,20 @@
+package com.pocvenda.vendedor.service;
+
+
+import com.pocvenda.vendedor.model.EntityInterface;
+
+import java.io.Serializable;
+import java.util.List;
+import java.util.Optional;
+
+public interface EntityBaseService <T extends EntityInterface, ID extends Serializable>{
+
+    public T save(T entity);
+    public List<T> findAll();
+    public Optional<T> findById(ID entityId);
+    public T update(T entity);
+    public T updateById(T entity, ID entityId);
+    public void delete(T entity);
+    public void deleteById(ID entityId);
+
+}
